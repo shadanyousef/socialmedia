@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Social media</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="selector">
+            <div id="selectfield">
+                <p id="selectText">Select Social Media</p>
+                <img src="images/3070682-removebg-preview.png" id="arrow">
+
+            </div>
+
+            <ul id="list" class="hide">
+                <li class="options">
+                    <img src="images/Instagram.png">
+                    <p>Instagram</p>
+                </li>
+                <li class="options">
+                    <img src="images/x.png">
+                    <p>X</p>
+                </li>
+                <li class="options">
+                    <img src="images/WhatsApp_icon-removebg-preview.png">
+                    <p>WhatsApp</p>
+                </li>
+                <li class="options">
+                    <img src="images/facebook.png">
+                    <p>FaceBook</p>
+                </li>
+                <li class="options">
+                    <img  src="images/youtube.png">
+                    <p>Youtube</p>
+                </li>
+                <li class="options">
+                    <img src="images/pinterest.png">
+                    <p>Pinterest</p>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+<script>
+
+var selectfield = document.getElementById("selectfield")
+var selectText = document.getElementById("selectText")
+var options =  document.getElementsByClassName("options")
+var list =document.getElementById("list")
+var arraow = document.getElementById("arrow")
+
+selectfield.onclick =function (){
+    list.classList.toggle("hide")
+    arraow.classList.toggle("rotate")
+
+}
+
+        for(option of options){
+            option.onclick = function(){
+                selectText.innerHTML= this.textContent
+                list.classList.toggle("hide")
+                arraow.classList.toggle("rotate")
+            }
+        }
+ 
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>
